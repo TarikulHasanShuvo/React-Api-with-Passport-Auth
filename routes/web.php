@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Spatie\Activitylog\Models\Activity;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
+Route::get('/test', function () {
+    return $activity = Activity::all();
+
+});
+
+
+/// //Route::get('/', function () {
 //    return view('welcome');
 //});
