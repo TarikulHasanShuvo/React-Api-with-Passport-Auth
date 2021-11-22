@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\TestEvent;
 use Illuminate\Support\Facades\Route;
 use Spatie\Activitylog\Models\Activity;
 
@@ -18,8 +19,10 @@ Route::get('/test', function () {
     return $activity = Activity::all();
 
 });
+Route::get('/event', function () {
+    event(new TestEvent("Hi This test event"));
+});
 
-
-/// //Route::get('/', function () {
-//    return view('welcome');
-//});
+Route::get('/', function () {
+    return view('welcome');
+});

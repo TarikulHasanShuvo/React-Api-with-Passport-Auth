@@ -30,9 +30,8 @@ class AuthController extends Controller
     {
         $loginData = $request->validate([
             'email' => 'email|required',
-            'password' => 'required'
+            'password' => 'required|min:8'
         ]);
-
 
         if( !Auth::attempt( $loginData )){
             return response()->json([
