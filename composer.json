@@ -12,6 +12,8 @@
         "laravel/passport": "^10.1",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
+        "laravel/ui": "^3.3",
+        "pusher/pusher-php-server": "^7.0",
         "spatie/laravel-activitylog": "^3.17"
     },
     "require-dev": {

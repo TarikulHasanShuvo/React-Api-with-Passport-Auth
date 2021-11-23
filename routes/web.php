@@ -19,10 +19,13 @@ Route::get('/test', function () {
     return $activity = Activity::all();
 
 });
-Route::get('/event', function () {
-    event(new TestEvent("Hi This test event"));
-});
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/event', function () {
+    event(new TestEvent("The Event is occurred"));
+});
+
+Route::view('/test-view','broadcast-test');
